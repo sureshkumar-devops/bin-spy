@@ -11,7 +11,7 @@ spec:
     metadata:
       labels:
         app: spy
-serviceAccount: Jenkins
+serviceAccount: jenkins
     spec:
       containers:
         - name: spy
