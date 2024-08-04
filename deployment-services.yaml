@@ -12,6 +12,7 @@ spec:
       labels:
         app: spy
     spec:      
+      serviceAccountName: jenkins
       containers:
         - name: spy
           image: lehardocker/spy-app-dev:latest 
