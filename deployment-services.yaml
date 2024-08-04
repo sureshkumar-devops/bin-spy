@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment 
 metadata:
   name: spy-deployment
-serviceAccountName: jenkins  
 spec:
   selector:
     matchLabels:
@@ -13,6 +12,7 @@ spec:
       labels:
         app: spy
     spec:
+      serviceAccountName: jenkins  
       containers:
         - name: spy
           image: lehardocker/spy-app-dev:latest 
