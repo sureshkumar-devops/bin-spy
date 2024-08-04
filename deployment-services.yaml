@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment 
 metadata:
   name: spy-deployment
+serviceAccount: jenkins  
 spec:
   selector:
     matchLabels:
@@ -11,7 +12,6 @@ spec:
     metadata:
       labels:
         app: spy
-serviceAccount: jenkins
     spec:
       containers:
         - name: spy
